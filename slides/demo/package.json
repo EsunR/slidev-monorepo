@@ -1,0 +1,15 @@
+{
+  "name": "slidev-demo",
+  "private": true,
+  "description": "slidev 演示项目",
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.34.3",
+    "@slidev/theme-default": "*",
+    "@slidev/theme-seriph": "*"
+  }
+}
