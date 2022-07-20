@@ -2,7 +2,7 @@
 import "zx/globals";
 import fg from "fast-glob";
 import fs from "fs";
-import path from "path";
+import path, { dirname } from "path";
 
 const rootDir = path.resolve(__dirname, "../");
 const slidesDir = path.resolve(__dirname, "../slides");
@@ -25,6 +25,15 @@ for (let dir of slideProjectDirs) {
   const pkgName = require(pkgJsonFile).name;
 
   cd(dir);
+  await $`
+cat <<EOF >vite.config.ts 
+import { defineConfig } from "vite";
+
+export default defineConfig({
+  base: "/${pkgName}/",
+});
+`;
   await $`pnpm build`;
+  await $`rm vite.config.ts`
   await $`mv dist ../../dist/${pkgName}`;
 }
