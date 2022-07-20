@@ -10,6 +10,16 @@ importers:
       fast-glob: 3.2.11
       zx: 7.0.7
 
+  slides/demo:
+    specifiers:
+      '@slidev/cli': ^0.34.3
+      '@slidev/theme-default': '*'
+      '@slidev/theme-seriph': '*'
+    dependencies:
+      '@slidev/cli': 0.34.3
+      '@slidev/theme-default': 0.21.2
+      '@slidev/theme-seriph': 0.21.2
+
   slides/fe-feture:
     specifiers:
       '@iconify-json/mdi': ^1.1.29
@@ -24,16 +34,6 @@ importers:
       '@slidev/theme-seriph': 0.21.2
     devDependencies:
       '@iconify-json/mdi': 1.1.29
-
-  slides/fe-overview:
-    specifiers:
-      '@slidev/cli': ^0.34.3
-      '@slidev/theme-default': '*'
-      '@slidev/theme-seriph': '*'
-    dependencies:
-      '@slidev/cli': 0.34.3_postcss@8.4.14
-      '@slidev/theme-default': 0.21.2
-      '@slidev/theme-seriph': 0.21.2
 
 packages:
 
@@ -156,6 +156,81 @@ packages:
     dependencies:
       estree-walker: 2.0.2
       picomatch: 2.3.1
+    dev: false
+
+  /@slidev/cli/0.34.3:
+    resolution: {integrity: sha512-uQCO/xiqYDPoD8njhzXc0oX0vjIRMjw37EKtFAIwhVw3bFRdVRUOfRjkp5HkIEz5jmbMvrkHwxdsgM4EqQ6pLg==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    peerDependencies:
+      playwright-chromium: ^1.10.0
+    peerDependenciesMeta:
+      playwright-chromium:
+        optional: true
+    dependencies:
+      '@antfu/utils': 0.5.2
+      '@hedgedoc/markdown-it-task-lists': 1.0.5_markdown-it@13.0.1
+      '@iconify-json/carbon': 1.1.6
+      '@iconify-json/ph': 1.1.2
+      '@slidev/client': 0.34.3_vite@2.9.14
+      '@slidev/parser': 0.34.3
+      '@slidev/types': 0.34.3
+      '@vitejs/plugin-vue': 2.3.3_vite@2.9.14+vue@3.2.37
+      '@vue/compiler-sfc': 3.2.37
+      cli-progress: 3.11.2
+      codemirror: 5.65.6
+      connect: 3.7.0
+      debug: 4.3.4
+      fast-glob: 3.2.11
+      fs-extra: 10.1.0
+      global-dirs: 3.0.0
+      import-from: 4.0.0
+      is-installed-globally: 0.4.0
+      jiti: 1.14.0
+      js-base64: 3.7.2
+      katex: 0.16.0
+      kolorist: 1.5.1
+      markdown-it: 13.0.1
+      markdown-it-footnote: 3.0.3
+      markdown-it-link-attributes: 4.0.0
+      monaco-editor: 0.33.0
+      nanoid: 4.0.0
+      open: 8.4.0
+      plantuml-encoder: 1.4.0
+      postcss-nested: 5.0.6
+      prismjs: 1.28.0
+      prompts: 2.4.2
+      resolve: 1.22.1
+      resolve-from: 5.0.0
+      resolve-global: 1.0.0
+      shiki: 0.10.1
+      unocss: 0.42.1_vite@2.9.14
+      unplugin-icons: 0.14.7_c13f2b75a81e892d939062931779d9c7
+      unplugin-vue-components: 0.20.1_vite@2.9.14+vue@3.2.37
+      vite: 2.9.14
+      vite-plugin-remote-assets: 0.2.2_vite@2.9.14
+      vite-plugin-vue-markdown: 0.20.1_vite@2.9.14
+      vite-plugin-vue-server-ref: 0.2.4_vite@2.9.14+vue@3.2.37
+      vite-plugin-windicss: 1.8.7_vite@2.9.14
+      vue: 3.2.37
+      windicss: 3.5.6
+      yargs: 17.5.1
+    transitivePeerDependencies:
+      - '@babel/parser'
+      - '@nuxt/kit'
+      - '@svgr/core'
+      - '@unocss/webpack'
+      - '@vue/composition-api'
+      - esbuild
+      - less
+      - postcss
+      - rollup
+      - sass
+      - stylus
+      - supports-color
+      - vue-template-compiler
+      - vue-template-es2015-compiler
+      - webpack
     dev: false
 
   /@slidev/cli/0.34.3_postcss@8.4.14:
@@ -2356,6 +2431,15 @@ packages:
       hey-listen: 1.0.8
       style-value-types: 5.0.0
       tslib: 2.4.0
+    dev: false
+
+  /postcss-nested/5.0.6:
+    resolution: {integrity: sha512-rKqm2Fk0KbA8Vt3AdGN0FB9OBOMDVajMG6ZCf/GoHgdxUJ4sBFp0A/uMIRm+MJUdo33YXEtjqIz8u7DAp8B7DA==}
+    engines: {node: '>=12.0'}
+    peerDependencies:
+      postcss: ^8.2.14
+    dependencies:
+      postcss-selector-parser: 6.0.10
     dev: false
 
   /postcss-nested/5.0.6_postcss@8.4.14:
