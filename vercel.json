@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/slidev-demo/(.*)",
+      "destination": "/slidev-demo/index.html"
+    },
+    {
+      "source": "/fe-future/(.*)",
+      "destination": "/fe-future/index.html"
+    }
+  ]
+}

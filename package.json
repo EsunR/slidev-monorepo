@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "pnpm clean && zx ./scripts/build.mjs",
-    "clean": "zx ./scripts/clean.mjs"
+    "clean": "zx ./scripts/clean.mjs",
+    "gen:vercel": "zx ./scripts/gen-vercel.mjs"
   },
   "author": "",
   "license": "ISC",
