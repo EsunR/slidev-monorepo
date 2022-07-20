@@ -4,8 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "pnpm clean && zx ./scripts/build.mjs",
+    "clean": "zx ./scripts/clean.mjs"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "fast-glob": "^3.2.11",
+    "zx": "^7.0.7"
+  }
 }
