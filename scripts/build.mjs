@@ -1,8 +1,8 @@
 #!/usr/bin/env zx
-import "zx/globals";
 import fg from "fast-glob";
 import fs from "fs";
-import path, { dirname } from "path";
+import path from "path";
+import "zx/globals";
 
 const rootDir = path.resolve(__dirname, "../");
 const slidesDir = path.resolve(__dirname, "../slides");
@@ -34,6 +34,6 @@ export default defineConfig({
 });
 `;
   await $`pnpm build`;
-  await $`rm vite.config.ts`
+  await $`rm vite.config.ts`;
   await $`mv dist ../../dist/${pkgName}`;
 }
