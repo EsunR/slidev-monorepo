@@ -44,6 +44,7 @@ export default defineConfig({
 $`echo "🚀  build gallery index ..."`;
 cd(galleryDir)
 await $`pnpm build`
-await $`mv ./dist/* ../../dist`
+await $`mv ./dist/* ../dist`
+await $`rm -rf ./dist`
 
 $`echo "🎉  build success"`;

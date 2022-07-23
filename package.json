@@ -7,7 +7,8 @@
     "gen:vercel": "zx ./scripts/gen-vercel.mjs",
     "deploy": "npx vercel",
     "dev:gallery": "pnpm -C gallery dev",
-    "build:gallery": "pnpm -C gallery build"
+    "build:gallery": "pnpm -C gallery build",
+    "clean:node_modules": "find . -name \"node_modules\" -type d -exec rm -rf '{}' +"
   },
   "author": "",
   "license": "ISC",
