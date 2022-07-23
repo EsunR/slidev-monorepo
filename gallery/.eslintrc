@@ -1,0 +1,30 @@
+{
+  "root": true,
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "parser": "@typescript-eslint/parser",
+    "vueFeatures": {
+      "filter": true,
+      "interpolationAsNonHTML": false,
+    }
+  },
+  "ignorePatterns": [
+    "node_modules",
+    "dist"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "vue"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:vue/vue3-recommended",
+    "eslint-config-prettier"
+  ],
+  "rules": {
+    "vue/multi-word-component-names": "off"
+  }
+}

@@ -5,7 +5,9 @@
     "build": "pnpm clean && zx ./scripts/build.mjs",
     "clean": "zx ./scripts/clean.mjs",
     "gen:vercel": "zx ./scripts/gen-vercel.mjs",
-    "deploy": "npx vercel"
+    "deploy": "npx vercel",
+    "dev:gallery": "pnpm -C gallery dev",
+    "build:gallery": "pnpm -C gallery build"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +16,7 @@
     "@typescript-eslint/parser": "^5.30.7",
     "eslint": "^8.20.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-vue": "^9.2.0",
     "fast-glob": "^3.2.11",
     "prettier": "^2.7.1",
     "ts-node": "^10.9.1",
