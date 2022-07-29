@@ -47,15 +47,3 @@ export default async (request: VercelRequest, response: VercelResponse) => {
   response.setHeader("Content-Type", "image/png");
   response.status(200).send(fs.readFileSync(screenShotFileDir));
 };
-
-async function main() {
-  const screenShotFileDir = await getScreenShotFilePath(
-    "fe-future",
-    "https://slidev-monorepo.vercel.app"
-  );
-  console.log(screenShotFileDir);
-}
-
-if (!process.env.AWS_EXECUTION_ENV) {
-  main();
-}
